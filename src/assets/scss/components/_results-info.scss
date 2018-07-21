@@ -1,0 +1,12 @@
+//----------------------------------------------
+// Search Results Notice
+//----------------------------------------------
+.results-info {
+
+  p {
+    animation: fade-in 0.25s ease both;
+  }
+  strong {
+    color: $color-alpha;
+  }
+}

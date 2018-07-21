@@ -1,0 +1,81 @@
+//----------------------------------------------
+//  Headings
+//----------------------------------------------
+%font-xxl, h1 {
+  margin-bottom: $pad-xxs;
+  line-height: 1.25;
+  @include font-rwd($font-xxl, $font-xxl + $font-scale)
+}
+
+%font-xl, h2 {
+  margin-bottom: $pad-xxs;
+  line-height: 1.25;
+  @include font-rwd($font-xl, $font-xl + $font-scale)
+}
+
+%font-lg, h3 {
+  margin-bottom: $pad-xxs;
+  line-height: 1.25;
+  @include font-rwd($font-lg, $font-lg + $font-scale)
+}
+
+%font-med, h4 {
+  margin-bottom: $pad-xxs;
+  line-height: 1.25;
+  @include font-rwd($font-med, $font-med + $font-scale)
+}
+
+%font-base, h5{
+  margin-bottom: $pad-xxs;
+  line-height: 1.25;
+  @include font-rwd($font-base, $font-base + $font-scale)
+}
+
+h1,h2,h3,h4,h5{
+  font-family: $font-header;
+  font-weight: 400;
+  color: $color-alpha;
+}
+
+//----------------------------------------------
+//  Titles
+//----------------------------------------------
+%font-meta {
+  font-size: $font-xxs;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+}
+
+//----------------------------------------------
+//  paragraphs
+//----------------------------------------------
+p {
+  margin-top: 0;
+  margin-bottom: $pad-xs;
+  @media (min-width: $mq-xxl){
+    //font-size: $font-sma;
+  }
+}
+
+b, strong{
+  font-weight: 700;
+}
+
+small {
+  display: block;
+  margin-bottom: 1em;
+  font-size: $font-xs;
+}
+
+//----------------------------------------------
+//  Selection
+//----------------------------------------------
+::selection {
+  color: white;
+  background: $color-alpha;
+}
+
+address {
+  font-style: normal;
+}

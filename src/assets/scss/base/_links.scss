@@ -1,0 +1,56 @@
+//----------------------------------------------
+//  Link Styles
+//  Basic global link styles
+//  @param: $mainColor: [$color-darkgrey] - initial color
+//  @param: $hoverColor:[$color-alpha]    - hover color
+//----------------------------------------------
+@mixin links($color: $color-alpha, $hover_color: $color-beta){
+ color: $color;
+ text-decoration: none;
+ line-height:inherit;
+ transition: color 0.4s ease-in-out;
+
+  &:hover, &:focus, a:hover &{
+    color: $hover_color;
+    transition: color 0.4s ease-in-out;
+  }
+  &:active{
+    color: darken($hover_color, 25);
+  }
+}
+
+
+//----------------------------------------------
+//  Global Links
+//----------------------------------------------
+a{
+  @include links($color-alpha, lighten($color-alpha, 20))
+}
+
+
+
+//----------------------------------------------
+//  Link qr0tQazmnJLSWRGm9mEtiv3V0HJOnIiNmFiRSmqaEUl7tWM7vx6840NcsFJsbC7
+//----------------------------------------------
+@mixin link-line(){
+  position: relative;
+  // top: 0.3em;
+  // margin: 0 0.6em;
+  //margin-bottom: 0.1em;
+  display: inline-block;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+    backface-visibility: hidden;
+  }
+  &:hover:after, a:hover &:after {
+    animation: link-hover .8s cubic-bezier(.58,.3,.005,1) 0s 1;
+  }
+}

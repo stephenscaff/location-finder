@@ -1,0 +1,31 @@
+.hours-table {
+
+  td, th {
+    text-align: left;
+  }
+
+  th {
+    padding-bottom: 0.75em;
+    @extend %font-meta;
+  }
+
+  td {
+    font-size: $font-sm;
+  }
+
+  td:nth-of-type(1) {
+    min-width: 4em;
+    @media (max-width: $mq-med) {
+      min-width: 5em;
+    }
+  }
+  td:nth-of-type(2),
+  td:nth-of-type(3),
+  td:nth-of-type(4) {
+    @media (max-width: $mq-med) {
+      min-width: 8em;
+      padding-right: 3em;
+      white-space: nowrap;
+    }
+  }
+}

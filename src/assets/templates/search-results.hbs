@@ -1,0 +1,99 @@
+{{#this}}
+<article class="result">
+  <header class="result__header">
+    <h3 class="result__name">{{name}}</h3>
+  </header>
+  <div class="result__grid">
+    <div class="result__info">
+
+      <span class="result__type">{{branchtype}}</span>
+
+      <address class="result__address">
+        <span class="result__street">{{address}}</span>
+        <span class="result__city">{{city}}</span>,
+        <span class="result__state">{{state}}</span>
+        <span class="result__zip">{{zip}}</span>
+      </address>
+
+      {{#if phone}}
+      <div class="result__tel">
+        <strong>Phone</strong> <a class="result__tel-link" href="">{{phone}}</a>
+      </div>
+      {{/if}}
+      {{#if fax}}
+      <div class="result__tel">
+        <strong>Fax</strong> <a class="result__tel-link" href="">{{fax}}</a>
+      </div>
+      {{/if}}
+      <a class="result__btn btn-line" href="http://maps.google.com/maps?f=d&daddr={{address}}+{{city}}+{{state}}+{{zip}}" target="_blank">Get Directions</a>
+    </div>
+
+    <div class="result__hours">
+      <h5 class="result__heading is-visually-hidden">Hours</h5>
+      <div class="result__table-wrap">
+      <table class="hours-table">
+  			<thead>
+  				<tr>
+  					<th></th>
+  					<th><span>Lobby</span></th>
+  					<th><span>Drive-Up</span></th>
+  					<th><span>ATM</span></th>
+  				</tr>
+  			</thead>
+				<tbody>
+					<tr>
+						<td><strong class="hours-table__day">Mon</strong></td>
+						<td>{{lhmonday}}<span class="hide show9:00 – 5:00 closed">Closed</span></td>
+						<td>{{dhmonday}}</td>
+						<td>24 Hours</td>
+					</tr>
+					<tr>
+						<td><strong class="hours-table__day">Tue</strong></td>
+						<td>{{lhtuesday}} </td>
+						<td>{{dhtuesday}}</td>
+						<td>24 Hours</td>
+					</tr>
+					<tr>
+						<td><strong class="hours-table__day">Wed</strong></td>
+						<td>{{lhwednesday}} </td>
+						<td>{{dhwednesday}}</td>
+						<td>24 Hours</td>
+					</tr>
+					<tr class="tractive1">
+						<td><strong class="hours-table__day">Thur</strong></td>
+						<td>{{lhthursday}} </td>
+						<td>{{dhthursday}}</td>
+						<td>24 Hours</td>
+					</tr>
+					<tr>
+						<td><strong class="hours-table__day">Fri</strong></td>
+						<td>{{lhfriday}} </td>
+						<td>{{dhfriday}}</td>
+						<td>24 Hours</td>
+					</tr>
+					<tr>
+						<td><strong class="hours-table__day">Sat</strong></td>
+						<td class="closed">{{lhsaturday}}</td>
+						<td class="closed"> {{dhsaturday}}</td>
+						<td>24 Hours</td>
+					</tr>
+					<tr>
+						<td><strong class="hours-table__day">Sunday</strong></td>
+						<td class="closed">{{lhsunday}}</td>
+						<td class="closed">{{dhsunday}}</td>
+						<td>24 Hours</td>
+					</tr>
+				</tbody>
+			</table>
+      </div>
+    </div>
+  </div>
+    {{#if branch_special_hours}}
+    <footer class="result__footer">
+      <div class="result__notice">
+        <p>{{removeHTML branch_special_hours}}</p>
+      </div>
+    </footer>
+    {{/if}}
+  </article>
+{{/this}}
