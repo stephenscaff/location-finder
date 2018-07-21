@@ -19,4 +19,18 @@
   &__logo svg {
     max-width: 10em;
   }
+
+  &__logo-type {
+    display: flex;
+    align-items: center;
+    font-size: 0.85em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    i {
+      font-size: 1.25em;
+      padding-right: 0.5em;
+    }
+  }
 }
